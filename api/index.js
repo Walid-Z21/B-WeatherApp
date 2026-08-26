@@ -10,7 +10,7 @@ app.use(cors({
 }))
 app.use(express.json())
 
-app.get('/weather', async(req, res)=>{
+app.get('/api/weather', async(req, res)=>{
     const {city}=req.query
 
     try{
