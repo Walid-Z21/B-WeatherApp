@@ -5,7 +5,9 @@ require('dotenv').config();
 
 const app=express();
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://weather-app-chi-kohl-90.vercel.app/'
+}))
 app.use(express.json())
 
 app.get('/api/weather', async(req, res)=>{
