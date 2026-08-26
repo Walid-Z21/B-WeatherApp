@@ -6,11 +6,11 @@ require('dotenv').config();
 const app=express();
 
 app.use(cors({
-    origin: 'https://weather-app-zeta-nine-29.vercel.app/'
+    origin: 'https://weather-app-zeta-nine-29.vercel.app'
 }))
 app.use(express.json())
 
-app.get('/api/weather', async(req, res)=>{
+app.get('/weather', async(req, res)=>{
     const {city}=req.query
 
     try{
